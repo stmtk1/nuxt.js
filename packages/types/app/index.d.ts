@@ -47,6 +47,7 @@ export interface Context {
   error(params: NuxtError): void
   nuxtState: NuxtState
   beforeNuxtRender(fn: (params: { Components: VueRouter['getMatchedComponents'], nuxtState: NuxtState }) => void): void
+  ssrContext?: any
 }
 
 export type Middleware = string | ((ctx: Context, cb: Function) => Promise<void> | void)
